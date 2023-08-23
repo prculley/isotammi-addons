@@ -1,16 +1,31 @@
-import os
+import os, sys
 import subprocess
 import tarfile
 import time
-from types import SimpleNamespace
+import json
+#from types import SimpleNamespace
 from collections import defaultdict
 
 import gi
 gi.require_version('Gtk', '3.0')
-from gramps.gen.const import GRAMPS_LOCALE as glocale
-from gramps.gen.plug import make_environment, PTYPE_STR
+if "GRAMPSPATH" in os.environ:
+    GRAMPSPATH = os.environ["GRAMPSPATH"]
+else:
+    GRAMPSPATH = "../../Gramps"
+try:
+    sys.path.insert(0, GRAMPSPATH)
+    os.environ['GRAMPS_RESOURCES'] = os.path.abspath(GRAMPSPATH)
+    from gramps.gen.const import GRAMPS_LOCALE as glocale
+    from gramps.gen.plug import make_environment, PTYPE_STR
+except ImportError:
+    print("Where is Gramps: '%s'? Use "
+          "'GRAMPSPATH=path python3 build.py as_needed'" %
+          (os.path.abspath(GRAMPSPATH)))
+    exit()
+# from gramps.gen.const import GRAMPS_LOCALE as glocale
+# from gramps.gen.plug import make_environment, PTYPE_STR
 
-grampsversions = [("5.0","gramps50"), ("5.1","gramps51"), ("5.2","gramps52")]
+grampsversions = [("5.2","gramps52")]
 languages = ["en","fi","sv"]
 
 def ignore(fname):
@@ -23,7 +38,7 @@ def get_tgz(addon,grampsver):
     return f"../addons/{grampsver}/download/{addon}.addon.tgz"
 
 def get_listing(grampsver,lang):
-    return f"../addons/{grampsver}/listings/addons-{lang}.txt"
+    return f"../addons/{grampsver}/listings/addons-{lang}.json"
 
 def get_addons():
     for dirname in os.listdir("."):
@@ -102,7 +117,7 @@ def bump_version(addon):
                 found = True
         lines.append(line)
     if found:
-        open(gprfile,"w").writelines(lines)
+        open(gprfile,"w", encoding="utf-8", newline='').writelines(lines)
         print(f"{addon}: version updated to {newver}")
         return newver
     else:
@@ -130,8 +145,10 @@ def update_listings():
     def register(ptype, **kwargs):
         #global plugins
         # need to take care of translated types
-        kwargs["ptype"] = PTYPE_STR[ptype]
-        plugins.append(SimpleNamespace(**kwargs))
+        #kwargs["ptype"] = PTYPE_STR[ptype]
+        kwargs["ptype"] = ptype
+        #plugins.append(SimpleNamespace(**kwargs))
+        plugins.append(kwargs)
     listings = defaultdict(list)
     for addon in get_addons():
         gprfile = find_gprfile(addon)
@@ -153,21 +170,47 @@ def update_listings():
                         continue
                     tgz = get_tgz(addon,grampsver)
                     tgzfile = f"{addon}.addon.tgz"
-                    d = dict(t=p.ptype, i=p.id, n=p.name, v=p.version, g=gver, # p.gramps_target_version,
-                             d=p.description, z=tgzfile)
+                    # d = dict(t=p.ptype, i=p.id, n=p.name, v=p.version, g=gver, # p.gramps_target_version,
+                    #          d=p.description, z=tgzfile)
+                    plugin = {
+                        "n": p["name"],
+                        "i": p["id"],
+                        "t": p["ptype"],
+                        "d": p["description"],
+                        "v": p["version"],
+                        "g": gver,  #p["gramps_target_version"],
+                        "s": p["status"],
+                        "z": ("%s.addon.tgz" % addon)}
+                    if "requires_mod" in p:
+                        plugin["rm"] = p["requires_mod"]
+                    if "requires_gi" in p:
+                        plugin["rg"] = p["requires_gi"]
+                    if "requires_exe" in p:
+                        plugin["re"] = p["requires_exe"]
+                    if "help_url" in p:
+                        plugin["h"] = p["help_url"]
+                    if "audience" in p:
+                        plugin["a"] = p["audience"]
+                    listings[(grampsver,lang)].append(plugin)
                     #print(d)
-                    listings[(grampsver,lang)].append(d)
+                    #listings[(grampsver,lang)].append(d)
 
     for gver, grampsver in grampsversions:
         print()
         print(grampsver)
         for lang in languages:
-            listing = listings[(grampsver,lang)]
+            #listing = listings[(grampsver,lang)]
             listing_file = get_listing(grampsver,lang)
             print("-",listing_file)
-            with open(listing_file,"w") as f:
-                for d in listing:
-                    print(d, file=f)
+            output = []
+            for plugin in sorted(listings[(grampsver,lang)],
+                                 key=lambda p: (p["t"], p["i"])):
+                output.append(plugin)
+                print(plugin["d"])
+            with open(listing_file,"w", encoding="utf-8", newline='') as fp_out:
+                json.dump(output, fp_out, indent=0)
+            #     for d in listing:
+            #         print(d, file=f)
 
 def removefile(fname):
     try:

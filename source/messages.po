@@ -1,0 +1,47 @@
+#: PropertyEditor/PropertyEditor.gpr.py:5
+#: PropertyEditor/PropertyEditor.gpr.py:16
+msgid "PropertyEditor"
+msgstr ""
+
+#: PropertyEditor/PropertyEditor.gpr.py:6
+msgid "Gramplet to edit attributes of multiple objects"
+msgstr ""
+
+#: PropertyEditor/PropertyEditor.py:144
+#, python-format
+msgid ""
+"This gramplet allows editing attributes for multiple %s objects at the same "
+"time"
+msgstr ""
+
+#: PropertyEditor/PropertyEditor.py:177
+msgid "Use regex"
+msgstr ""
+
+#: PropertyEditor/PropertyEditor.py:185
+msgid "Old text:"
+msgstr ""
+
+#: PropertyEditor/PropertyEditor.py:190
+msgid "New text:"
+msgstr ""
+
+#: PropertyEditor/PropertyEditor.py:202
+msgid "Clear"
+msgstr ""
+
+#: PropertyEditor/PropertyEditor.py:206
+msgid "Apply to selected objects"
+msgstr ""
+
+#: PropertyEditor/PropertyEditor.py:211
+msgid "_Help"
+msgstr ""
+
+#: PropertyEditor/PropertyEditor.py:252
+msgid "Setting properties"
+msgstr ""
+
+#: PropertyEditor/PropertyEditor.py:270
+msgid "Regex operation failed: {}"
+msgstr ""
