@@ -34,16 +34,18 @@ plug.tool.tool_categories["Isotammi"] = ("Isotammi", _("Isotammi tools"))
 
 register(TOOL, 
     id    = 'generatecitations',
-    name =  _("Generate source citations from notes"),
+    name =  _("Generate source citations from notes from digital directory or SSHY page"),
     description =  _("Generate source citations from notes"),
     version = '1.1.8',
     gramps_target_version = major_version,
     status = STABLE,
+    audience = EVERYONE,
     fname = 'generatecitations.py',
     authors = ["Kari Kujansuu"],
     authors_email = ["kari.kujansuu@gmail.com"],
     category = "Isotammi",
     toolclass = 'GenerateCitations',
     optionclass = 'GenerateCitationsOptions',
+    help_url="Addon:Isotammi_addons#Generate_source_citations_from_notes",
     tool_modes = [TOOL_MODE_GUI, TOOL_MODE_CLI]
 )
