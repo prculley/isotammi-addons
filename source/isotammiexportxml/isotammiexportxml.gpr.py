@@ -32,15 +32,18 @@ from gramps.version import major_version
 register(EXPORT, 
     id    = 'isotammiexportxml',
     name  = _("Isotammi XML export"),
-    description =  _("Isotammi XML export"),
+    description =  _("Gramps XML export with Isotammi metadata"),
+    authors = ["Kari Kujansuu"],
+    authors_email = ["kari.kujansuu@gmail.com"],
     version = '1.0.5',
     gramps_target_version = major_version,
     status = STABLE,
+    audience = EVERYONE,
     fname = 'isotammiexportxml.py',
-    authors = ["KKu"],
     export_function = 'export_data',
     export_options = 'IsotammiOptionBox',
     export_options_title = _('Isotammi XML export options'),
+    help_url="Addon:Isotammi_addons#Isotammi_XML_export",
     extension = "isotammi.gpkg"
 )
 
