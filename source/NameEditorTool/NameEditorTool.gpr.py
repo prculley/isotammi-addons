@@ -34,14 +34,17 @@ plug.tool.tool_categories["Isotammi"] = ("Isotammi", _("Isotammi tools"))
 register(TOOL, 
     id    = 'NameEditorTool',
     name  = _("Name Editor Tool"),
-    description =  _("Edit names"),
+    description =  _("Search and Replace tool for harmonizing name parts"),
+    authors = ["Kari Kajansuu"],
+    authors_email = ["kari.kujansuu@gmail.com"],
     version = '1.0.4',
     gramps_target_version = major_version,
     status = STABLE,
+    audience = EVERYONE,
     fname = 'NameEditorTool.py',
-    authors = ["KKu"],
     category = "Isotammi",
     toolclass = 'Tool',
     optionclass = 'Options',
-    tool_modes = [TOOL_MODE_GUI]
+    tool_modes = [TOOL_MODE_GUI],
+    help_url="Addon:Isotammi_addons#Name_Editor_Tool"
 )
