@@ -26,28 +26,32 @@ from gramps.version import major_version
 register(RULE,
   id    = 'HasValidDate',
   name  = _("Events with a valid date"),
-  description = _("Events with a valid date"),
+  description = _("Filter rule to find Events with a valid date"),
   version = '1.0.8',
   authors = ["Kari Kujansuu"],
   authors_email = ["kari.kujansuu@gmail.com"],
   gramps_target_version = major_version,
   status = STABLE,
+  audience = EVERYONE,
   fname = "_hasvaliddate.py",
   ruleclass = 'HasValidDate',  # must be rule class name
+  help_url="Addon:Isotammi_addons#Events_with_an_invalid.2Fvalid_date",
   namespace = 'Event',  # one of the primary object classes
 )
 
 register(RULE,
   id    = 'HasInValidDate',
-  name  = _("Events with an in valid date"),
+  name  = _("Filter rule to find Events with an invalid date"),
   description = _("Events with an invalid date"),
   version = '1.0.8',
   authors = ["Kari Kujansuu"],
   authors_email = ["kari.kujansuu@gmail.com"],
   gramps_target_version = major_version,
   status = STABLE,
+  audience = EVERYONE,
   fname = "_hasvaliddate.py",
   ruleclass = 'HasInValidDate',  # must be rule class name
+  help_url="Addon:Isotammi_addons#Events_with_an_invalid.2Fvalid_date",
   namespace = 'Event',  # one of the primary object classes
 )
 
