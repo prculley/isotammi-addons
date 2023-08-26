@@ -33,17 +33,19 @@ plug.tool.tool_categories["Isotammi"] = ("Isotammi", _("Isotammi tools"))
 #------------------------------------------------------------------------
 
 register(TOOL, 
-id    = 'importsources',
-name  = _("Import Sources"),
-description =  _("Import Sources from a CSV file"),
-version = '0.0.4',
-gramps_target_version = major_version,
-status = STABLE,
-fname = 'importsources.py',
-authors = ["KKu"],
-category = "Isotammi",
-toolclass = 'Tool',
-optionclass = 'Options',
-tool_modes = [TOOL_MODE_GUI, TOOL_MODE_CLI]
-)
+         id    = 'importsources',
+         name  = _("Import Sources"),
+         description =  _("Import Sources from a CSV file"),
+         authors = ["Kari Kujansuu"],
+         authors_email = ["kari.kujansuu@gmail.com"],
+         version = '0.0.4',
+         gramps_target_version = major_version,
+         status = STABLE,
+         fname = 'importsources.py',
+         category = "Isotammi",
+         toolclass = 'Tool',
+         optionclass = 'Options',
+         help_url="Addon:Isotammi_addons#Import_CSV_sources
+         tool_modes = [TOOL_MODE_GUI, TOOL_MODE_CLI]
+        )
 
