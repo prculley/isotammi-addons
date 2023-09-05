@@ -3,257 +3,300 @@
 "n": "Name Editor Tool",
 "i": "NameEditorTool",
 "t": 2,
-"d": "Edit names",
-"v": "1.0.4",
+"d": "Search and Replace tool for harmonizing name parts",
+"v": "1.0.5",
 "g": "5.2",
 "s": 3,
-"z": "NameEditorTool.addon.tgz"
+"z": "NameEditorTool.addon.tgz",
+"h": "Addon:Isotammi_addons#Name_Editor_Tool",
+"a": 0
 },
 {
 "n": "Name Merge Tool",
 "i": "NameMergeTool",
 "t": 2,
-"d": "Merge names",
-"v": "1.0.9",
+"d": "Merge tool with name fuzzy match",
+"v": "1.1.0",
 "g": "5.2",
 "s": 3,
-"z": "NameMergeTool.addon.tgz"
+"z": "NameMergeTool.addon.tgz",
+"h": "Addon:Isotammi_addons#Name_Merge_Tool",
+"a": 0
 },
 {
 "n": "SuperTool",
 "i": "SuperTool",
 "t": 2,
-"d": "",
-"v": "1.3.2",
+"d": "Query and script builder",
+"v": "1.3.3",
 "g": "5.2",
 "s": 3,
-"z": "SuperTool.addon.tgz"
+"z": "SuperTool.addon.tgz",
+"h": "Addon:Isotammi_addons#SuperTool",
+"a": 1
 },
 {
-"n": "Generate source citations from notes",
+"n": "Generate source citations from notes from digital directory or SSHY page",
 "i": "generatecitations",
 "t": 2,
 "d": "Generate source citations from notes",
-"v": "1.1.8",
+"v": "1.1.9",
 "g": "5.2",
 "s": 3,
-"z": "generatecitations.addon.tgz"
+"z": "generatecitations.addon.tgz",
+"h": "Addon:Isotammi_addons#Generate_source_citations_from_notes",
+"a": 0
 },
 {
 "n": "Import Sources",
 "i": "importsources",
 "t": 2,
 "d": "Import Sources from a CSV file",
-"v": "0.0.4",
+"v": "0.0.5",
 "g": "5.2",
 "s": 3,
-"z": "importsources.addon.tgz"
+"z": "importsources.addon.tgz",
+"h": "Addon:Isotammi_addons#Import_CSV_sources",
+"a": 0
 },
 {
 "n": "ZipInstall",
 "i": "zipinstall",
 "t": 2,
 "d": "Install a plugin from a ZIP file",
-"v": "1.1.4",
+"v": "1.1.5",
 "g": "5.2",
 "s": 3,
-"z": "zipinstall.addon.tgz"
+"z": "zipinstall.addon.tgz",
+"h": "Addon:Isotammi_addons#ZipInstall",
+"a": 0
 },
 {
 "n": "Isotammi XML export",
 "i": "isotammiexportxml",
 "t": 4,
-"d": "Isotammi XML export",
-"v": "1.0.5",
+"d": "Gramps XML export with Isotammi metadata",
+"v": "1.0.6",
 "g": "5.2",
 "s": 3,
-"z": "isotammiexportxml.addon.tgz"
+"z": "isotammiexportxml.addon.tgz",
+"h": "Addon:Isotammi_addons#Isotammi_XML_export",
+"a": 0
 },
 {
 "n": "AddSourcesGramplet",
 "i": "AddSourcesGramplet",
 "t": 10,
 "d": "Gramplet to add sources",
-"v": "0.9.5",
+"v": "0.9.6",
 "g": "5.2",
 "s": 3,
 "z": "AddSourcesGramplet.addon.tgz",
-"h": "AddSourcesGramplet Gramplet"
+"h": "https://gramps-project.org/wiki/index.php/Addon:Isotammi_addons#Add_Sources_Gramplet",
+"a": 0
 },
 {
 "n": "Dates",
 "i": "Dates",
 "t": 10,
-"d": "Dates",
-"v": "1.1.3",
+"d": "Event Gramplet for reformatting invalid Dates",
+"v": "1.1.4",
 "g": "5.2",
 "s": 3,
 "z": "Dates.addon.tgz",
-"h": "Dates gramplet"
+"h": "Addon:Isotammi_addons#Dates",
+"a": 0
 },
 {
 "n": "Deep Connections Graph",
 "i": "DeepConnectionsGraph",
 "t": 10,
-"d": "DeepConnectionsGraph Gramplet",
-"v": "1.1.6",
+"d": "Dashboard Gramplet to serve up the DeepConnectionsGraph web form",
+"v": "1.1.7",
 "g": "5.2",
 "s": 3,
 "z": "DeepConnectionsGraph.addon.tgz",
-"h": ""
+"h": "Addon:Isotammi_addons#Deep_Connections_Graph",
+"a": 1
 },
 {
 "n": "Multimerge Gramplet",
 "i": "Multimergegramplet Gramplet",
 "t": 10,
-"d": "Multimerge Gramplet",
-"v": "1.1.7",
+"d": "Multimerge Gramplet allows the merging of multiple objects in a single step",
+"v": "1.1.8",
 "g": "5.2",
 "s": 3,
 "z": "multimergegramplet.addon.tgz",
-"h": "http://github.com/Taapeli/isotammi-addons/tree/master/source/multimergegramplet/README.md"
+"h": "Addon:Isotammi_addons#Multimerge_Gramplet",
+"a": 0
 },
 {
 "n": "PlaceTool",
 "i": "PlaceTool",
 "t": 10,
-"d": "Gramplet to manipulate multiple places",
-"v": "1.1.3",
+"d": "Gramplet to harmonize multiple places",
+"v": "1.1.4",
 "g": "5.2",
 "s": 3,
 "z": "PlaceTool.addon.tgz",
-"h": "PlaceTool Gramplet"
+"h": "Addon:Isotammi_addons#Place_tool",
+"a": 0
 },
 {
 "n": "PropertyEditor",
 "i": "PropertyEditor",
 "t": 10,
-"d": "Gramplet to edit attributes of multiple objects",
-"v": "1.1.1",
+"d": "Gramplet to simultaneously edit attributes of multiple objects",
+"v": "1.1.2",
 "g": "5.2",
 "s": 3,
 "z": "PropertyEditor.addon.tgz",
-"h": "PropertyEditor Gramplet"
+"h": "Addon:Isotammi_addons#PropertyEditor",
+"a": 0
 },
 {
 "n": "Isotammi configuration",
 "i": "isotammiconfig",
 "t": 10,
-"d": "Isotammi configuration",
-"v": "1.1.1",
+"d": "Dashboard Gramplet to configure access Isotammi addon collection",
+"v": "1.1.2",
 "g": "5.2",
 "s": 3,
 "z": "IsotammiConfig.addon.tgz",
-"h": ""
+"h": "Addon:Isotammi_addons#Isotammi_configuration",
+"a": 0
 },
 {
-"n": "Events with an in valid date",
+"n": "Filter rule to find Events with an invalid date",
 "i": "HasInValidDate",
 "t": 13,
 "d": "Events with an invalid date",
-"v": "1.0.8",
+"v": "1.0.9",
 "g": "5.2",
 "s": 3,
-"z": "_hasvaliddate.addon.tgz"
+"z": "_hasvaliddate.addon.tgz",
+"h": "Addon:Isotammi_addons#Events_with_an_invalid.2Fvalid_date",
+"a": 0
 },
 {
 "n": "Events with a valid date",
 "i": "HasValidDate",
 "t": 13,
-"d": "Events with a valid date",
-"v": "1.0.8",
+"d": "Filter rule to find Events with a valid date",
+"v": "1.0.9",
 "g": "5.2",
 "s": 3,
-"z": "_hasvaliddate.addon.tgz"
+"z": "_hasvaliddate.addon.tgz",
+"h": "Addon:Isotammi_addons#Events_with_an_invalid.2Fvalid_date",
+"a": 0
 },
 {
 "n": "Generic citation filter",
 "i": "citation-genfilter",
 "t": 13,
 "d": "Generic citation filter",
-"v": "1.3.2",
+"v": "1.3.3",
 "g": "5.2",
 "s": 3,
-"z": "SuperTool.addon.tgz"
+"z": "SuperTool.addon.tgz",
+"h": "Addon:Isotammi_addons#Generic_Rules_for_Supertool",
+"a": 0
 },
 {
 "n": "Generic event filter",
 "i": "event-genfilter",
 "t": 13,
 "d": "Generic event filter",
-"v": "1.3.2",
+"v": "1.3.3",
 "g": "5.2",
 "s": 3,
-"z": "SuperTool.addon.tgz"
+"z": "SuperTool.addon.tgz",
+"h": "Addon:Isotammi_addons#Generic_Rules_for_Supertool",
+"a": 0
 },
 {
 "n": "Generic family filter",
 "i": "family-genfilter",
 "t": 13,
 "d": "Generic family filter",
-"v": "1.3.2",
+"v": "1.3.3",
 "g": "5.2",
 "s": 3,
-"z": "SuperTool.addon.tgz"
+"z": "SuperTool.addon.tgz",
+"h": "Addon:Isotammi_addons#Generic_Rules_for_Supertool",
+"a": 0
 },
 {
 "n": "Generic media filter",
 "i": "media-genfilter",
 "t": 13,
 "d": "Generic media filter",
-"v": "1.3.2",
+"v": "1.3.3",
 "g": "5.2",
 "s": 3,
-"z": "SuperTool.addon.tgz"
+"z": "SuperTool.addon.tgz",
+"h": "Addon:Isotammi_addons#Generic_Rules_for_Supertool",
+"a": 0
 },
 {
 "n": "Generic note filter",
 "i": "note-genfilter",
 "t": 13,
 "d": "Generic note filter",
-"v": "1.3.2",
+"v": "1.3.3",
 "g": "5.2",
 "s": 3,
-"z": "SuperTool.addon.tgz"
+"z": "SuperTool.addon.tgz",
+"h": "Addon:Isotammi_addons#Generic_Rules_for_Supertool",
+"a": 0
 },
 {
 "n": "Generic person filter",
 "i": "person-genfilter",
 "t": 13,
 "d": "Generic person filter",
-"v": "1.3.2",
+"v": "1.3.3",
 "g": "5.2",
 "s": 3,
-"z": "SuperTool.addon.tgz"
+"z": "SuperTool.addon.tgz",
+"h": "Addon:Isotammi_addons#Generic_Rules_for_Supertool",
+"a": 0
 },
 {
 "n": "Generic place filter",
 "i": "place-genfilter",
 "t": 13,
 "d": "Generic place filter",
-"v": "1.3.2",
+"v": "1.3.3",
 "g": "5.2",
 "s": 3,
-"z": "SuperTool.addon.tgz"
+"z": "SuperTool.addon.tgz",
+"h": "Addon:Isotammi_addons#Generic_Rules_for_Supertool",
+"a": 0
 },
 {
 "n": "Generic repository filter",
 "i": "repository-genfilter",
 "t": 13,
 "d": "Generic repository filter",
-"v": "1.3.2",
+"v": "1.3.3",
 "g": "5.2",
 "s": 3,
-"z": "SuperTool.addon.tgz"
+"z": "SuperTool.addon.tgz",
+"h": "Addon:Isotammi_addons#Generic_Rules_for_Supertool",
+"a": 0
 },
 {
 "n": "Generic source filter",
 "i": "source-genfilter",
 "t": 13,
 "d": "Generic source filter",
-"v": "1.3.2",
+"v": "1.3.3",
 "g": "5.2",
 "s": 3,
-"z": "SuperTool.addon.tgz"
+"z": "SuperTool.addon.tgz",
+"h": "Addon:Isotammi_addons#Generic_Rules_for_Supertool",
+"a": 0
 }
 ]

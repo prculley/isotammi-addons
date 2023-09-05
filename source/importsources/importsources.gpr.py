@@ -24,29 +24,30 @@ Gramps registration file
 """
 from gramps.version import major_version
 from gramps.gui import plug
+
 plug.tool.tool_categories["Isotammi"] = ("Isotammi", _("Isotammi tools"))
 
-#------------------------------------------------------------------------
+# ------------------------------------------------------------------------
 #
-# importsources  
+# importsources
 #
-#------------------------------------------------------------------------
+# ------------------------------------------------------------------------
 
-register(TOOL, 
-         id    = 'importsources',
-         name  = _("Import Sources"),
-         description =  _("Import Sources from a CSV file"),
-         authors = ["Kari Kujansuu"],
-         authors_email = ["kari.kujansuu@gmail.com"],
-         version = '0.0.4',
-         gramps_target_version = major_version,
-         status = STABLE,
-         audience = EVERYONE,
-         fname = 'importsources.py',
-         category = "Isotammi",
-         toolclass = 'Tool',
-         optionclass = 'Options',
-         help_url="Addon:Isotammi_addons#Import_CSV_sources
-         tool_modes = [TOOL_MODE_GUI, TOOL_MODE_CLI]
-        )
-
+register(
+    TOOL,
+    id="importsources",
+    name=_("Import Sources"),
+    description=_("Import Sources from a CSV file"),
+    authors=["Kari Kujansuu"],
+    authors_email=["kari.kujansuu@gmail.com"],
+    version="0.0.5",
+    gramps_target_version=major_version,
+    status=STABLE,
+    audience=EVERYONE,
+    fname="importsources.py",
+    category="Isotammi",
+    toolclass="Tool",
+    optionclass="Options",
+    help_url="Addon:Isotammi_addons#Import_CSV_sources",
+    tool_modes=[TOOL_MODE_GUI, TOOL_MODE_CLI],
+)

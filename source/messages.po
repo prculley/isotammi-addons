@@ -1,10 +1,10 @@
 #: PropertyEditor/PropertyEditor.gpr.py:5
-#: PropertyEditor/PropertyEditor.gpr.py:16
+#: PropertyEditor/PropertyEditor.gpr.py:19
 msgid "PropertyEditor"
 msgstr ""
 
 #: PropertyEditor/PropertyEditor.gpr.py:6
-msgid "Gramplet to edit attributes of multiple objects"
+msgid "Gramplet to simultaneously edit attributes of multiple objects"
 msgstr ""
 
 #: PropertyEditor/PropertyEditor.py:144
